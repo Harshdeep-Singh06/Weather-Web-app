@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Weather</title>
     <script src = "https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
 </head>
 <body class = "h-screen flex flex-col bg-gradient-to-br from-sky-100 via-blue-400 to-blue-600">
     <nav class = "bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg">
@@ -16,6 +17,15 @@
             </div>
         </div>
     </nav>
+    <div class = "max-w-7xl mx-auto flex-1 ">
+      <div class = "flex justify-center items-center h-full">
+        <input type="text" placeholder = "Search your City..." class=" w-52 sm:w-80 px-4 py-1 sm:py-2 bg-white/20 text-white placeholder-white/70 rounded-l-2xl focus:outline-none backdrop-blur-sm ">
+        <button class = "px-4 py-1 sm:py-2 bg-white/20 text-white rounded-r-2xl hover:bg-white/30 transition backdrop-blur-sm">
+            <i class="fas fa-search"></i>
+         </button>
+       </div>  
+    </div>
+
     
 </body>
 </html>
