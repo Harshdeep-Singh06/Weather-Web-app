@@ -17,8 +17,9 @@ searchBtn.addEventListener('click', async function(e){
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
     const cityName = data.name;
-    console.log("Temp:", temperature);
-    console.log("Humidity:", humidity);
-    console.log("Wind:", windSpeed);
-    console.log("City:", cityName);
+    
+    tempElement.innerText = Math.round(temperature) + "°c";
+    cityElement.innerText = cityName;
+    humidityElement.innerText = humidity + "%";
+    windElement.innerText = windSpeed + " km/h"
 })
