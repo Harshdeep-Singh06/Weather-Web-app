@@ -1,5 +1,9 @@
 const searchBtn = document.querySelector("button");
 const searchInput = document.querySelector("input");
+const tempElement = document.querySelector(".temp-value")
+const cityElement = document.querySelector(".city-value")
+const humidityElement = document.querySelector(".humidity-value")
+const windElement = document.querySelector(".wind-value")
 
 searchBtn.addEventListener('click', async function(e){
     const city = searchInput.value;
