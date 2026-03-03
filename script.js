@@ -14,6 +14,7 @@ searchBtn.addEventListener('click', async function(e){
     const response = await fetch(Url);
     if(!response.ok){
         console.log("City not found");
+        return;
     }
     const data  = await response.json();
     // console.log(data);
