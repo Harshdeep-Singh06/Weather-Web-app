@@ -21,8 +21,21 @@ searchBtn.addEventListener('click', async function(e){
     const condition = data.weather[0].main;
     if(condition === "Clear"){
         weatherIcon.src= "images/clear.png";
+    }else if (condition === "Rain"){
+        weatherIcon.src = "images/rain.png"
+
+    }else if (condition === "Mist"){
+        weatherIcon.src = "images/mist.png"
+
+    }else if (condition === "Snow"){
+        weatherIcon.src = "images/snow.png"
+
+    }else if (condition === "Drizzle"){
+        weatherIcon.src = "images/drizzle.png"
+
+    }else{
+        weatherIcon.src = "images/clouds.png"
     }
-    console.log("Condition:", condition);
     
     tempElement.innerText = Math.round(temperature) + "°c";
     cityElement.innerText = cityName;
