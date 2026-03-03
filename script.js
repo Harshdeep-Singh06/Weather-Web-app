@@ -4,6 +4,7 @@ const tempElement = document.querySelector(".temp-value")
 const cityElement = document.querySelector(".city-value")
 const humidityElement = document.querySelector(".humidity-value")
 const windElement = document.querySelector(".wind-value")
+const weatherIcon = document.querySelector(".weather-icon")
 
 searchBtn.addEventListener('click', async function(e){
     const city = searchInput.value;
@@ -17,9 +18,16 @@ searchBtn.addEventListener('click', async function(e){
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
     const cityName = data.name;
+    const condition = data.weather[0].main;
+    if(condition === "Clear"){
+        weatherIcon.src= "images/clear.png";
+    }
+    console.log("Condition:", condition);
     
     tempElement.innerText = Math.round(temperature) + "°c";
     cityElement.innerText = cityName;
     humidityElement.innerText = humidity + "%";
-    windElement.innerText = windSpeed + " km/h"
+    windElement.innerText = windSpeed + " km/h";
+
+
 })
