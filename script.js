@@ -9,5 +9,9 @@ searchBtn.addEventListener('click', async function(e){
     const response = await fetch(Url);
     const data  = await response.json();
     console.log(data);
+    const temperature = data.main.temp;
+    const humidity = data.main.humidity;
+    const windSpeed = data.wind.speed;
+    const cityName = data.main;
     
 })
